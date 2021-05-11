@@ -1,5 +1,5 @@
 import React from 'react';
-import background from "./background.mp4"
+import background from "./backgroundVideo.mp4"
 function Background(props) {
     return (
         <div>

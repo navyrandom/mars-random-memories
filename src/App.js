@@ -10,7 +10,11 @@ function App() {
        <Background />
       {/* <GameGrid />  */}
       <Home />
+<<<<<<< HEAD
+     {/*} <Dialog />*/}
+=======
       {/* <Dialog /> */}
+>>>>>>> origin/dev
     </div>
   );
 }

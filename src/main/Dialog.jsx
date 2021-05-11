@@ -13,13 +13,16 @@ const useStyles = makeStyles(() => ({
 function Dialog() {
   const classes = useStyles();
   const [showGame, setShowGame] = useState(false);
+  const [display, setDisplay]=useState(true);
 
   const handleClick = () => {
     setShowGame(true);
+    setDisplay(!display);
   };
 
   return (
-    <div className={classes.dial}>
+    <div>
+   { display && (  <div className={classes.dial}>
       <p>Bonjour Jenny</p>
       <p>Hello Percy</p>
       <p>Alors quoi de neuf</p>
@@ -34,10 +37,12 @@ function Dialog() {
         cartes le plus rapidement possible.Si tu es prêt appuie sur le bouton!
         Et bonne chance
       </p>
-      <div>
+      
         <button onClick={handleClick}>Démarrer le jeu</button>
+      </div>)}
+        
         {showGame ? <GameGrid /> : null}
-      </div>
+   
     </div>
   );
 }

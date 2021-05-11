@@ -1,8 +1,11 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import Percy from "./percy.png";
+import Jenny from "./jenny.png";
 import "./Home.css";
 
-export default function Home() {
+
+function Home() {
+  
   return (
     <div className="robots">
 
@@ -12,3 +15,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default Home;

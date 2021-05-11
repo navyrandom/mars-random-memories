@@ -30,23 +30,22 @@
   animation: Percy 2s linear;
   margin-left: 30%;
 }
-@keyframes Percy {
+@keyframes jenny{
   from {
     margin-left: 0%;
   }
+<<<<<<< HEAD
+  to{
+    margin-left: 60%;
+  }*/
+=======
   to {
     margin-left: 30%;
   }
+>>>>>>> origin/dev
 }
-
-.start {
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: auto;
-  padding: auto;
-  font-size: 40px;
-  text-align: center;
-  background-color: rgb(177, 114, 31);
+.jenny{
+  width: 280px;
+  margin-left: 50px;
+  background-color: crimson;
 }
