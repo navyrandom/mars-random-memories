@@ -7,10 +7,14 @@ import Dialog from "./main/Dialog";
 function App() {
   return (
     <div>
-      <Background />
-      {/* <GameGrid /> */}
+       <Background />
+      {/* <GameGrid />  */}
       <Home />
+<<<<<<< HEAD
      {/*} <Dialog />*/}
+=======
+      {/* <Dialog /> */}
+>>>>>>> origin/dev
     </div>
   );
 }

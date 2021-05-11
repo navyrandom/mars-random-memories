@@ -7,9 +7,11 @@ import "./Home.css";
 function Home() {
   
   return (
-    <div className="divRobot">
-      <img src={Percy} className="percy" />
-      <img src={Jenny} className="jenny"/>
+    <div className="robots">
+
+        <img src="/jenny.png" alt="jenny" className="jenny" />
+      
+      <img src="/percy.png" alt="percy" className="percy" />
     </div>
   );
 }

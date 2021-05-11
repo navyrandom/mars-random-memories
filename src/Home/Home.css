@@ -1,19 +1,48 @@
-.percy{
-  width:300px ;
-  margin-left:450px;
-  background-color: :blue;
- /* transition:0.5s;
-  animation:jenny 1s linear;
-  background-color:red;
+/*commun 2 robots */
 
+.robots {
+  display: flex;
+  margin-top: 380px;
 }
-@keyframes jenny{
+/*jenny */
+.jenny {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+
+  animation: Jenny 2s linear;
+  margin-left: 45%;
+}
+@keyframes Jenny {
   from {
     margin-left: 100%;
   }
+  to {
+    margin-left: 45%;
+  }
+}
+/*percy */
+.percy {
+  width: 500px;
+  height: 500px;
+  
+  position: absolute;
+  animation: Percy 2s linear;
+  margin-left: 30%;
+}
+@keyframes jenny{
+  from {
+    margin-left: 0%;
+  }
+<<<<<<< HEAD
   to{
     margin-left: 60%;
   }*/
+=======
+  to {
+    margin-left: 30%;
+  }
+>>>>>>> origin/dev
 }
 .jenny{
   width: 280px;
