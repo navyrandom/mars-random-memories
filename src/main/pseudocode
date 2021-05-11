@@ -1,0 +1,22 @@
+je veux un tableau d'objet sur lequel je pourrais mapper
+
+2 attributs
+    name ou id
+    url
+
+au click je détecte l'objet
+je stocke son name ou id dans un state pour pv le comparer
+
+je clique sur une autre image, je stocke son name ou id ds un state et je le compare au précédent
+
+    si égalité je retire les 2 images
+
+    sinon je réinitialise les states et je recommence
+
+quand le tableau est vide le jeu est fini
+
+
+En plus:
+rajouter un compteur de points
+rajouter un timer
+rajouter un tableau des records
