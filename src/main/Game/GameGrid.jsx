@@ -1,15 +1,13 @@
-import { Grid, GridList, makeStyles } from "@material-ui/core";
-import React from "react";
-import Card from "./Card";
-import image1 from "./image1.jpg";
-import image2 from "./image2.jpg";
+import { Grid, makeStyles } from '@material-ui/core';
+import React, { useState } from 'react';
+import Card from './Card';
 
 const useStyles = makeStyles(() => ({
   root: {
-    display: "flex",
-    justifyContent: "space-around",
-    overflow: "hidden",
-    marginTop: "400px",
+    display: 'flex',
+    justifyContent: 'space-around',
+    overflow: 'hidden',
+    marginTop: '400px',
   },
   gridList: {
     width: 300,
@@ -17,28 +15,58 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
+const pictures = [
+  {
+    name: 'img1',
+    URL: '/img/image1.jpg',
+  },
+  {
+    name: 'img2',
+    URL: '/img/image2.jpg',
+  },
+  {
+    name: 'img1',
+    URL: '/img/image1.jpg',
+  },
+  {
+    name: 'img2',
+    URL: '/img/image2.jpg',
+  },
+];
+
 export default function GameGrid() {
   const classes = useStyles();
+
+  const [imageClick, setImageClick] = useState();
+  
+  const arrayImagesClick = [];
+
+  const handleClick = (e) => {
+    setImageClick(e.target.src);
+    arrayImagesClick.push(imageClick);
+    console.log(arrayImagesClick);
+  };
+
   return (
-    <div className={classes.root}>
-      <GridList cellHeight={60} className={classes.gridList}>
-        <Grid container>
-          <Grid item>
-            <Card SrcImage={image1} alt="avion" />
-          </Grid>
-          <Grid item>
-            <Card SrcImage={image2} alt="avion" />
-          </Grid>
+    <Grid
+      container
+      spacing={2}
+      justify="center"
+      style={{
+        height: 200,
+        paddingTop: '5%',
+        paddingBottom: '5%',
+      }}
+    >
+      {pictures.map((picture, index) => (
+        <Grid item xs={3} style={{ border: '1px solid black' }} key={index}>
+          <Card
+            {...picture}
+            handleClick={handleClick}
+            // handleClick2={handleClick2}
+          />
         </Grid>
-        <Grid container>
-          <Grid item>
-            <Card SrcImage={image1} alt="boy" />
-          </Grid>
-          <Grid item>
-            <Card SrcImage={image2} alt="boy" />
-          </Grid>
-        </Grid>
-      </GridList>
-    </div>
+      ))}
+    </Grid>
   );
 }
