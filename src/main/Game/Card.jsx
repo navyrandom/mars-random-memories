@@ -20,11 +20,12 @@ image:{
 function Card({URL, handleClick}) {
     const classes = useStyle()
     return (
+        
         <div className={classes.backgound} onClick={handleClick} >
             {/* <img className={classes.image}/> */}
             <img src={URL} className={classes.image} alt=""/>
             
-            
+
         </div>
     );
 }
