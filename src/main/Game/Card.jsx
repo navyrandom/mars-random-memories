@@ -22,7 +22,7 @@ function Card({SrcImage}) {
     return (
         <div className={classes.backgound}>
         
-            <img src={SrcImage} className={classes.image}/>
+            <img src={SrcImage} className={classes.image} alt="" />
             
         </div>
     );

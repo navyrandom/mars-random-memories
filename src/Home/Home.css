@@ -1,0 +1,51 @@
+/*commun 2 robots */
+.jenny .percy {
+  width: 200px;
+  height: 200px;
+}
+/* .robots {
+  display: flex;
+} */
+/*jenny */
+/* .jenny {
+  margin-top: 50px;
+  transition: 0.5s;
+  animation: Jenny 1s linear;
+  margin-left: 60%;
+}
+@keyframes Jenny {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 60%;
+  }
+} */
+/*percy */
+.percy {
+  margin-top: 50px;
+  transition: 0.5s;
+  animation: Percy 1s forwards;
+  margin-left: 60%;
+  background-color: blue;
+}
+@keyframes Percy {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 60%;
+  }
+}
+
+.start {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: auto;
+  font-size: 40px;
+  text-align: center;
+  background-color: rgb(177, 114, 31);
+}
