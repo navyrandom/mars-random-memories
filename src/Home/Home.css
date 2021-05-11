@@ -1,40 +1,41 @@
 /*commun 2 robots */
-.jenny .percy {
-  width: 200px;
-  height: 200px;
-}
-/* .robots {
+
+.robots {
   display: flex;
-} */
+  margin-top: 380px;
+}
 /*jenny */
-/* .jenny {
-  margin-top: 50px;
-  transition: 0.5s;
-  animation: Jenny 1s linear;
-  margin-left: 60%;
+.jenny {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+
+  animation: Jenny 2s linear;
+  margin-left: 45%;
 }
 @keyframes Jenny {
   from {
     margin-left: 100%;
   }
   to {
-    margin-left: 60%;
+    margin-left: 45%;
   }
-} */
+}
 /*percy */
 .percy {
-  margin-top: 50px;
-  transition: 0.5s;
-  animation: Percy 1s forwards;
-  margin-left: 60%;
-  background-color: blue;
+  width: 500px;
+  height: 500px;
+  
+  position: absolute;
+  animation: Percy 2s linear;
+  margin-left: 30%;
 }
 @keyframes Percy {
   from {
-    margin-left: 100%;
+    margin-left: 0%;
   }
   to {
-    margin-left: 60%;
+    margin-left: 30%;
   }
 }
 
