@@ -1,6 +1,7 @@
 import { Grid, makeStyles } from '@material-ui/core';
 import React, { useState } from 'react';
 import Card from './Card';
+import MoveCard from './MoveCard';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -60,7 +61,8 @@ export default function GameGrid() {
     >
       {pictures.map((picture, index) => (
         <Grid item xs={3} style={{ border: '1px solid black' }} key={index}>
-          <Card
+          <MoveCard
+          
             {...picture}
             handleClick={handleClick}
             // handleClick2={handleClick2}

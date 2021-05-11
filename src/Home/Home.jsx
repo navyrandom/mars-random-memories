@@ -1,15 +1,17 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import Percy from "./percy.png";
+import Jenny from "./jenny.png";
 import "./Home.css";
 
-export default function Home() {
+
+function Home() {
+  
   return (
-    <>
-        <img src="/jenny.png" alt="jenny" className="jenny" />
-      <p>
-        <button className="start"> Start the game </button>
-      </p>
-      <img src="/percy.png" alt="percy" className="percy" />
-    </>
+    <div className="divRobot">
+      <img src={Percy} className="percy" />
+      <img src={Jenny} className="jenny"/>
+    </div>
   );
 }
+
+export default Home;
