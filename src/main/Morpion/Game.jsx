@@ -80,6 +80,10 @@ function Game(props) {
         <Box row={2} col={1} currentState={turn} changeTurn={changeTurn} />
         <Box row={2} col={2} currentState={turn} changeTurn={changeTurn} />
       </div>
+      <div>
+        <button className="btn1">Reset</button>
+        <button className="btn2">Mars destruction</button>
+      </div>
     </div>
   );
 }
