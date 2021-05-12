@@ -3,14 +3,16 @@
 .robots {
   display: flex;
   margin-top: 50px;
+ 
 }
 /*jenny */
-.jenny {
+.jenny { 
   width: 500px;
   height: 500px;
   position: absolute;
   animation: Jenny 2s linear;
   margin-left: 50%;
+ 
 }
 @keyframes Jenny {
   from {
@@ -35,4 +37,7 @@
   to {
     margin-left: 25%;
   }
+}
+.BlaBla{
+  margin-left: 10%;
 }

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./style.css";
 import Box from "./Box/Box";
+import ReactAudioPlayer from "react-audio-player";
 
 const board = [[], [], []];
 
@@ -65,6 +66,7 @@ function Game(props) {
   return (
     <div id="game">
       <div className="winning-text">{winningtext}</div>
+      
       <div className="row">
         <Box row={0} col={0} currentState={turn} changeTurn={changeTurn} />
         <Box row={0} col={1} currentState={turn} changeTurn={changeTurn} />
@@ -79,7 +81,14 @@ function Game(props) {
         <Box row={2} col={0} currentState={turn} changeTurn={changeTurn} />
         <Box row={2} col={1} currentState={turn} changeTurn={changeTurn} />
         <Box row={2} col={2} currentState={turn} changeTurn={changeTurn} />
-      </div>
+      </div><ReactAudioPlayer
+        autoPlay="true"
+        src="./Moroder.mp3"
+        style={{ borderRadius: "30%", height: "20px" }}
+        volume="0.001"
+      />
+    
+      
     </div>
   );
 }
