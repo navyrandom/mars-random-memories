@@ -5,7 +5,7 @@ function Audio() {
   return (
     <div
       style={{
-        display: "flex",
+        display: "none",
         alignItems: "center",
         justifyContent: "center",
         backgroundColor: "rgb(250, 248, 248)",

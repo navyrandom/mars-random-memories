@@ -25,7 +25,8 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-function Dialog() {
+function StartButton
+() {
   const classes = useStyles();
   const [showGame, setShowGame] = useState(false);
   const [display, setDisplay] = useState(true);
@@ -37,24 +38,6 @@ function Dialog() {
 
   return (
     <div>
-      {/* { display && (  <div className={classes.dial}>
-      <p>Bonjour Jenny</p>
-      <p>Hello Percy</p>
-      <p>Alors quoi de neuf</p>
-      <p>Rien comme d'habitude je prends des photos pour la Nasa. Et toi?</p>
-      <p>Je viens de découvrir un super jeu. Tu veux essayer?</p>
-      <p>Pourquoi pas wall-e est encore occuper à ramasser des satellites.</p>
-      <p>
-        Ok super tu vas voir c'est trés simple même Quentin Bardenet a réussi à
-        comprendre. Tu as une grille de carte et tu dois réussir à retourner les
-        deux cartes similaires l'une à la suite de l'autre sinon elles se
-        remettent dans leur état initial.L'objectif est de retourner toutes les
-        cartes le plus rapidement possible.Si tu es prêt appuie sur le bouton!
-        Et bonne chance
-      </p>
-      
-       
-      </div>)} */}
       <Link to="/start" style={{ textDecoration: "none" }}>
       <button onClick={handleClick} className={classes.button}>
         Start Game
@@ -65,4 +48,5 @@ function Dialog() {
   );
 }
 
-export default Dialog;
+export default StartButton
+;
