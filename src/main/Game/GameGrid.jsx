@@ -1,5 +1,7 @@
 import { Grid, makeStyles } from '@material-ui/core';
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import ButtonMorpion from './ButtonMorpion';
 import Card from './Card';
 import MoveCard from './MoveCard';
 
@@ -86,7 +88,7 @@ export default function GameGrid() {
   };
 
   return (
-    
+    <>
     <Grid
       container
       spacing={2}
@@ -119,5 +121,7 @@ export default function GameGrid() {
       
     </Grid>
     
+    <ButtonMorpion />
+    </>
   );
 }

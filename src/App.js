@@ -2,7 +2,7 @@ import "./App.css";
 import Home from "./Home/Home";
 import Background from "./main/Background";
 import GameGrid from "./main/Game/GameGrid";
-import Dialog from "./main/Dialog";
+import StartButton from "./main/StartButton";
 import Audio from "./main/Audio";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Fragment } from "react";
@@ -19,7 +19,7 @@ function App() {
             exact
             render={() => (
               <Fragment>
-                <Dialog />
+                <StartButton />
                 <Home />
               </Fragment>
             )}
@@ -34,7 +34,7 @@ function App() {
               </Fragment>
             )}
           />
-          
+          <Route path="/morpion" exact render={() => <Game />} />
         </Switch>
         {/* <Game /> */}
       </BrowserRouter>
