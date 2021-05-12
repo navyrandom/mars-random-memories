@@ -1,10 +1,23 @@
 import React, { useState } from "react";
 import "./style.css";
 import Box from "./Box/Box";
+import { makeStyles } from "@material-ui/core";
 
 const board = [[], [], []];
 
+const useStyle = makeStyles({
+  youWin: {
+    color: "white",
+    fontSize: "40px",
+    textAlign: "center",
+    backgroundColor: "#f7a440",
+    fontFamily: "Fascinate",
+    marginBottom: "30px"
+  },
+});
+
 function Game(props) {
+  const classes = useStyle();
   const [turn, setTurn] = useState("X");
   const [winningtext, setWinningtext] = useState("");
 
@@ -64,7 +77,7 @@ function Game(props) {
 
   return (
     <div id="game">
-      <div className="winning-text">{winningtext}</div>
+      <div className={classes.youWin}>{winningtext}</div>
       <div className="row">
         <Box row={0} col={0} currentState={turn} changeTurn={changeTurn} />
         <Box row={0} col={1} currentState={turn} changeTurn={changeTurn} />

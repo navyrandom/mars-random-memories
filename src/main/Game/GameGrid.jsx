@@ -2,6 +2,7 @@ import { Grid, makeStyles } from '@material-ui/core';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ButtonMorpion from './ButtonMorpion';
+import MagicButton from './MagicButton';
 import Card from './Card';
 import MoveCard from './MoveCard';
 
@@ -122,6 +123,7 @@ export default function GameGrid() {
     </Grid>
     
     <ButtonMorpion />
+    <MagicButton />
     </>
   );
 }
