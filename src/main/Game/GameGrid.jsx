@@ -14,12 +14,19 @@ const useStyles = makeStyles(() => ({
     width: 300,
     height: 400,
   },
+  background:{
+    backgroundColor:"white"
+  }
 }));
 
 const pictures = [
   {
-    name: 'img1',
-    URL: '/img/image1.jpg',
+    name: 'img4',
+    URL: '/img/image4.jpg',
+  },
+  {
+    name: 'img3',
+    URL: '/img/image3.jpg',
   },
   {
     name: 'img2',
@@ -30,9 +37,39 @@ const pictures = [
     URL: '/img/image1.jpg',
   },
   {
+    name: 'img3',
+    URL: '/img/image3.jpg',
+  },
+  {
+    name: 'img4',
+    URL: '/img/image4.jpg',
+  },
+  {
+    name: 'img5',
+    URL: '/img/image5.jpg',
+  },
+  {
     name: 'img2',
     URL: '/img/image2.jpg',
   },
+  {
+    name: 'img7',
+    URL: '/img/image7.jpeg',
+  },
+  {
+    name: 'img5',
+    URL: '/img/image5.jpg',
+  },
+  {
+    name: 'img7',
+    URL: '/img/image7.jpeg',
+  },
+  {
+    name: 'img1',
+    URL: '/img/image1.jpg',
+  },
+  
+
 ];
 
 export default function GameGrid() {
@@ -49,18 +86,28 @@ export default function GameGrid() {
   };
 
   return (
+    
     <Grid
       container
       spacing={2}
       justify="center"
       style={{
         height: 200,
+        width:800,
         paddingTop: '5%',
         paddingBottom: '5%',
+        marginLeft:'350px',
+        maxWidth:"100%",
+        marginTop:"80px", 
       }}
     >
       {pictures.map((picture, index) => (
-        <Grid item xs={3} style={{ border: '1px solid black' }} key={index}>
+        <Grid item xs={3} style={{ display:'flex',
+        justifyContent:'center', 
+        backgroundColor:"rgb(255, 255, 255,0.7)",
+        maxWidth:"100%",
+        
+         }} key={index}>
           <MoveCard
           
             {...picture}
@@ -69,6 +116,8 @@ export default function GameGrid() {
           />
         </Grid>
       ))}
+      
     </Grid>
+    
   );
 }

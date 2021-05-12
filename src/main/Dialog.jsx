@@ -8,6 +8,18 @@ const useStyles = makeStyles(() => ({
     textAlign: "justify",
     margin: "100px 50px 0px 50px",
   },
+  button:{
+    color: 'white',
+  display: 'flex',
+  flex: 'column',
+  alignItems: 'center',
+  margin: 'auto',
+  padding: 'auto',
+  fontSize: '40px',
+  textAlign: 'center',
+  backgroundColor: '#f7a440',
+  fontFamily:'Fascinate',
+  }
 }));
 
 function Dialog() {
@@ -38,7 +50,7 @@ function Dialog() {
         Et bonne chance
       </p>
       
-        <button onClick={handleClick}>Démarrer le jeu</button>
+        <button onClick={handleClick} className={classes.button}>Start Game</button>
       </div>)}
         
         {showGame ? <GameGrid /> : null}
