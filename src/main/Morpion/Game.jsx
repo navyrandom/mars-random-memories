@@ -1,35 +1,13 @@
 import React, { useState } from "react";
 import "./style.css";
 import Box from "./Box/Box";
-import { makeStyles } from "@material-ui/core";
-import Explosion from "./Explosion";
+import ReactAudioPlayer from "react-audio-player";
 
 const board = [[], [], []];
 
-const useStyle = makeStyles({
-  youWin: {
-    color: "white",
-    fontSize: "40px",
-    textAlign: "center",
-    backgroundColor: "#f7a440",
-    fontFamily: "Fascinate",
-    marginBottom: "30px",
-  },
-});
-
 function Game(props) {
-  const classes = useStyle();
   const [turn, setTurn] = useState("X");
   const [winningtext, setWinningtext] = useState("");
-  const [showApocalypse, setShowApocalypse] = useState(false);
-
-  const handleApocalypse = () => {
-    setShowApocalypse(!showApocalypse);
-  };
-
-  const handleClick = () => {
-    setTurn();
-  };
 
   function changeTurn(row, col) {
     board[row][col] = turn;
@@ -87,7 +65,8 @@ function Game(props) {
 
   return (
     <div id="game">
-      <div className={classes.youWin}>{winningtext}</div>
+      <div className="winning-text">{winningtext}</div>
+      
       <div className="row">
         <Box row={0} col={0} currentState={turn} changeTurn={changeTurn} />
         <Box row={0} col={1} currentState={turn} changeTurn={changeTurn} />
@@ -102,16 +81,14 @@ function Game(props) {
         <Box row={2} col={0} currentState={turn} changeTurn={changeTurn} />
         <Box row={2} col={1} currentState={turn} changeTurn={changeTurn} />
         <Box row={2} col={2} currentState={turn} changeTurn={changeTurn} />
-      </div>
-      <div>
-        <button className="btn1" onClick={handleClick}>
-          Reset
-        </button>
-        <button className="btn2" onClick={handleApocalypse}>
-          Mars destruction
-        </button>
-        {showApocalypse ? <Explosion /> : null}
-      </div>
+      </div><ReactAudioPlayer
+        autoPlay="true"
+        src="./Moroder.mp3"
+        style={{ borderRadius: "30%", height: "20px" }}
+        volume="0.001"
+      />
+    
+      
     </div>
   );
 }
