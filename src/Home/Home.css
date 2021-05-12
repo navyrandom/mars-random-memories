@@ -10,14 +10,14 @@
   height: 500px;
   position: fixed;
   animation: Jenny 2s linear;
-  margin-left: 45%;
+  margin-left: 50%;
 }
 @keyframes Jenny {
   from {
     margin-left: 100%;
   }
   to {
-    margin-left: 45%;
+    margin-left: 50%;
   }
 }
 /*percy */
@@ -26,12 +26,13 @@
   height: 500px;
   position: fixed;
   animation: Percy 2s linear;
-  margin-left: 30%;
+  margin-left: 25%;
 }
 @keyframes Percy {
   from {
     margin-left: 0%;
   }
   to {
-    margin-left: 30%;
+    margin-left: 25%;
   }
+}
