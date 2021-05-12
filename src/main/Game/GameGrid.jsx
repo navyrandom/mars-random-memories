@@ -12,6 +12,7 @@ const useStyles = makeStyles(() => ({
     justifyContent: 'space-around',
     overflow: 'hidden',
     marginTop: '400px',
+   
   },
   gridList: {
     width: 300,
@@ -99,7 +100,7 @@ export default function GameGrid() {
         width:800,
         paddingTop: '5%',
         paddingBottom: '5%',
-        marginLeft:'350px',
+        marginLeft:'500px',
         maxWidth:"100%",
         marginTop:"80px", 
       }}

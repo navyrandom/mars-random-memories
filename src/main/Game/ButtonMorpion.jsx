@@ -18,7 +18,6 @@ const useStyles = makeStyles(() => ({
     marginTop: "500px",
     marginLeft: "auto",
     marginRight:"auto",
-    position: "absolute"
   },
 }));
 

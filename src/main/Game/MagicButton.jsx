@@ -11,17 +11,17 @@ const useStyles = makeStyles(() => ({
     position: 'absolute',
     bottom: '0px',
     // visibility: 'hidden'
-    // opacity: '0'
+    opacity: '0'
   },
 }));
 
-function ButtonMorpion() {
+function MagicButton() {
   const classes = useStyles();
 
   const [showCongrats, setShowCongrats] = useState(false);
 
   const handleClick = () => {
-    window.alert('YOU ARE FUCKING AWESOME LIKE THIS WEBSITE');
+    alert('YOU ARE FUCKING AWESOME LIKE THIS WEBSITE');
     // setShowCongrats(!showCongrats);
   };
 
@@ -32,4 +32,4 @@ function ButtonMorpion() {
   );
 }
 
-export default ButtonMorpion;
+export default MagicButton;
