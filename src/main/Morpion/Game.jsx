@@ -3,6 +3,7 @@ import "./style.css";
 import Box from "./Box/Box";
 import { makeStyles } from "@material-ui/core";
 import Explosion from "./Explosion";
+import { Link } from "react-router-dom";
 
 const board = [[], [], []];
 
@@ -107,10 +108,12 @@ function Game(props) {
         <button className="btn1" onClick={handleClick}>
           Reset
         </button>
+        <Link to="/destruction">
         <button className="btn2" onClick={handleApocalypse}>
           Mars destruction
         </button>
         {showApocalypse ? <Explosion /> : null}
+        </Link>
       </div>
     </div>
   );

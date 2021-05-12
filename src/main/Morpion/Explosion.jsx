@@ -4,7 +4,8 @@ function Explosion(props) {
   return (
     <div>
       <h1>big bang</h1>
-      <img src="/apocalypse.jpg" alt="fin du monde" />
+      <img style={{height:"1500px", zIndex: 'auto'}} 
+      src="/apocalypse.jpg" alt="fin du monde" />
     </div>
   );
 }
