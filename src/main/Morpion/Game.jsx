@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./style.css";
 import Box from "./Box/Box";
 import { makeStyles } from "@material-ui/core";
+import Explosion from "./Explosion";
 
 const board = [[], [], []];
 
@@ -12,7 +13,7 @@ const useStyle = makeStyles({
     textAlign: "center",
     backgroundColor: "#f7a440",
     fontFamily: "Fascinate",
-    marginBottom: "30px"
+    marginBottom: "30px",
   },
 });
 
@@ -20,6 +21,15 @@ function Game(props) {
   const classes = useStyle();
   const [turn, setTurn] = useState("X");
   const [winningtext, setWinningtext] = useState("");
+  const [showApocalypse, setShowApocalypse] = useState(false);
+
+  const handleApocalypse = () => {
+    setShowApocalypse(!showApocalypse);
+  };
+
+  const handleClick = () => {
+    setTurn();
+  };
 
   function changeTurn(row, col) {
     board[row][col] = turn;
@@ -94,8 +104,13 @@ function Game(props) {
         <Box row={2} col={2} currentState={turn} changeTurn={changeTurn} />
       </div>
       <div>
-        <button className="btn1">Reset</button>
-        <button className="btn2">Mars destruction</button>
+        <button className="btn1" onClick={handleClick}>
+          Reset
+        </button>
+        <button className="btn2" onClick={handleApocalypse}>
+          Mars destruction
+        </button>
+        {showApocalypse ? <Explosion /> : null}
       </div>
     </div>
   );
