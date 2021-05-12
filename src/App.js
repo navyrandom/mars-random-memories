@@ -35,6 +35,7 @@ function App() {
             )}
           />
           <Route path="/morpion" exact render={() => <Game />} />
+          <Route path="/destruction" exact render={() => <Game />} />
         </Switch>
         {/* <Game /> */}
       </BrowserRouter>
