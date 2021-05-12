@@ -12,6 +12,7 @@ backgound:{
 },
 image:{
     maxWidth: "100%",
+    maxHeight:"90%",
     display:"flex",
     justifyContent:"center",
 }

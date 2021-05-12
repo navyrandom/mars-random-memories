@@ -2,14 +2,13 @@
 
 .robots {
   display: flex;
-  margin-top: 380px;
+  margin-top: 250px;
 }
 /*jenny */
 .jenny {
   width: 500px;
   height: 500px;
-  position: absolute;
-
+  position: fixed;
   animation: Jenny 2s linear;
   margin-left: 45%;
 }
@@ -25,27 +24,15 @@
 .percy {
   width: 500px;
   height: 500px;
-  
-  position: absolute;
+  position: fixed;
   animation: Percy 2s linear;
   margin-left: 30%;
 }
-@keyframes jenny{
+@keyframes Percy {
   from {
     margin-left: 0%;
   }
-<<<<<<< HEAD
-  to{
-    margin-left: 60%;
-  }*/
-=======
   to {
     margin-left: 30%;
   }
->>>>>>> origin/dev
-}
-.jenny{
-  width: 280px;
-  margin-left: 50px;
-  background-color: crimson;
 }
