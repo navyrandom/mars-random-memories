@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core";
 import GameGrid from "./Game/GameGrid";
 
@@ -8,24 +8,24 @@ const useStyles = makeStyles(() => ({
     textAlign: "justify",
     margin: "100px 50px 0px 50px",
   },
-  button:{
-    color: 'white',
-  display: 'flex',
-  flex: 'column',
-  alignItems: 'center',
-  margin: 'auto',
-  padding: 'auto',
-  fontSize: '40px',
-  textAlign: 'center',
-  backgroundColor: '#f7a440',
-  fontFamily:'Fascinate',
-  }
+  button: {
+    color: "white",
+    display: "flex",
+    flex: "column",
+    alignItems: "center",
+    margin: "auto",
+    padding: "auto",
+    fontSize: "40px",
+    textAlign: "center",
+    backgroundColor: "#f7a440",
+    fontFamily: "Fascinate",
+  },
 }));
 
 function Dialog() {
   const classes = useStyles();
   const [showGame, setShowGame] = useState(false);
-  const [display, setDisplay]=useState(true);
+  const [display, setDisplay] = useState(true);
 
   const handleClick = () => {
     setShowGame(true);
@@ -34,8 +34,9 @@ function Dialog() {
 
   return (
     <div>
-   { display && (  <div className={classes.dial}>
-      <p>Bonjour Jenny</p>
+      {display && (
+        <div className={classes.dial}>
+          {/* <p>Bonjour Jenny</p>
       <p>Hello Percy</p>
       <p>Alors quoi de neuf</p>
       <p>Rien comme d'habitude je prends des photos pour la Nasa. Et toi?</p>
@@ -48,13 +49,15 @@ function Dialog() {
         remettent dans leur état initial.L'objectif est de retourner toutes les
         cartes le plus rapidement possible.Si tu es prêt appuie sur le bouton!
         Et bonne chance
-      </p>
-      
-        <button onClick={handleClick} className={classes.button}>Start Game</button>
-      </div>)}
-        
-        {showGame ? <GameGrid /> : null}
-   
+      </p> */}
+
+          <button onClick={handleClick} className={classes.button}>
+            Start Game
+          </button>
+        </div>
+      )}
+
+      {showGame ? <GameGrid /> : null}
     </div>
   );
 }
