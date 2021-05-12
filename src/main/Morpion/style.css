@@ -17,3 +17,15 @@ div#game {
   font-size: large;
   font-weight: bolder;
 }
+
+.btn1 {
+  margin-top: 50px;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.btn2 {
+  margin-top: 50px;
+  padding: 10px;
+  margin-left: 100px;
+}
