@@ -2,13 +2,13 @@
 
 .robots {
   display: flex;
-  margin-top: 250px;
+  margin-top: 50px;
 }
 /*jenny */
 .jenny {
   width: 500px;
   height: 500px;
-  position: fixed;
+  position: absolute;
   animation: Jenny 2s linear;
   margin-left: 50%;
 }
@@ -24,7 +24,7 @@
 .percy {
   width: 500px;
   height: 500px;
-  position: fixed;
+  position: absolute;
   animation: Percy 2s linear;
   margin-left: 25%;
 }
