@@ -7,10 +7,21 @@ import { Link } from "react-router-dom";
 import ReactAudioPlayer from "react-audio-player";
 
 const board = [[], [], []];
-
+const useStyle = makeStyles({
+  win: {
+    color: "white",
+    alignItems: "center",
+    marginBottom: "30px",
+    fontSize: "40px",
+    backgroundColor: "#f7a440",
+    fontFamily: "Fascinate",
+  },
+});
 function Game(props) {
+  const classes = useStyle();
   const [turn, setTurn] = useState("X");
   const [winningtext, setWinningtext] = useState("");
+  const [showApocalypse, setShowApocalypse] = useState(false);
 
   function changeTurn(row, col) {
     board[row][col] = turn;
@@ -26,6 +37,13 @@ function Game(props) {
       setWinningtext(winner + ";*!/5-#& Gagné en martien");
     }
   }
+
+  const handleApocalypse = () => {
+    setShowApocalypse(true);
+  };
+  const handleClick = () => {
+    setTurn();
+  };
 
   function checkWin() {
     // test sur row
@@ -68,8 +86,8 @@ function Game(props) {
 
   return (
     <div id="game">
-      <div className="winning-text">{winningtext}</div>
-      
+      <div className={classes.win}>{winningtext}</div>
+
       <div className="row">
         <Box row={0} col={0} currentState={turn} changeTurn={changeTurn} />
         <Box row={0} col={1} currentState={turn} changeTurn={changeTurn} />
@@ -90,10 +108,10 @@ function Game(props) {
           Reset
         </button>
         <Link to="/destruction">
-        <button className="btn2" onClick={handleApocalypse}>
-          Mars destruction
-        </button>
-        {showApocalypse ? <Explosion /> : null}
+          <button className="btn2" onClick={handleApocalypse}>
+            Mars destruction
+          </button>
+          {showApocalypse ? <Explosion /> : null}
         </Link>
       </div>
       <ReactAudioPlayer
@@ -102,8 +120,6 @@ function Game(props) {
         style={{ borderRadius: "30%", height: "20px" }}
         volume="0.001"
       />
-    
-      
     </div>
   );
 }
