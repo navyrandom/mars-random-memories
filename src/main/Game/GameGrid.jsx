@@ -2,6 +2,7 @@ import { Grid, makeStyles } from '@material-ui/core';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ButtonMorpion from './ButtonMorpion';
+import MagicButton from './MagicButton';
 import Card from './Card';
 import MoveCard from './MoveCard';
 
@@ -11,6 +12,7 @@ const useStyles = makeStyles(() => ({
     justifyContent: 'space-around',
     overflow: 'hidden',
     marginTop: '400px',
+   
   },
   gridList: {
     width: 300,
@@ -98,7 +100,7 @@ export default function GameGrid() {
         width:800,
         paddingTop: '5%',
         paddingBottom: '5%',
-        marginLeft:'350px',
+        marginLeft:'500px',
         maxWidth:"100%",
         marginTop:"80px", 
       }}
@@ -122,6 +124,7 @@ export default function GameGrid() {
     </Grid>
     
     <ButtonMorpion />
+    <MagicButton />
     </>
   );
 }

@@ -15,8 +15,9 @@ const useStyles = makeStyles(() => ({
     textAlign: "center",
     backgroundColor: "#f7a440",
     fontFamily: "Fascinate",
-    marginBottom: "0",
-    position: "fixed"
+    marginTop: "500px",
+    marginLeft: "auto",
+    marginRight:"auto",
   },
 }));
 
